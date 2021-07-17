@@ -112,5 +112,9 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(publicPath, 'index.html'));
 });
 
-httpServer.listen(3001);
-httpsServer.listen(3002);
+httpServer.listen(3001, () => {
+  console.log(`server started ${3001}`);
+});
+httpsServer.listen(3002, () => {
+  console.log(`server started ${3002}`);
+});
