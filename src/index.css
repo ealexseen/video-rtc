@@ -3,3 +3,63 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+.main {
+
+}
+
+.main h1 {
+  margin-bottom: 10px;
+}
+
+.main__list {
+  list-style-type: none;
+}
+
+.main__item {
+  margin-bottom: 15px;
+}
+
+.main__item span {
+  margin-right: 10px;
+  font-weight: bold;
+  display: inline-block;
+  width: 370px;
+}
+
+.main__item button {
+
+}
+
+.button {
+  background: orange;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  user-select: none;
+  cursor: pointer;
+}
+
+.room {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.room__item {
+  width: calc(90% / 2);
+  border: 5px solid orange;
+  border-radius: 10px;
+  font-size: 0;
+  overflow: hidden;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}

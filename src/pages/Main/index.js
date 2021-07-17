@@ -18,23 +18,37 @@ export default function Main() {
   }, []);
 
   return (
-    <div ref={rootNode}>
-      <h1>Available Rooms</h1>
+    <div ref={rootNode} className="main">
+      <h1>
+          {rooms.length ? 'Выбор комнату(ы)' : 'Создайте комнату'}
+      </h1>
 
-      <ul>
+      <ul className="main__list">
         {rooms.map(roomID => (
-          <li key={roomID}>
-            {roomID}
-            <button onClick={() => {
-              history.push(`/room/${roomID}`);
-            }}>JOIN ROOM</button>
+          <li key={roomID} className="main__item">
+            <span>
+                Комната № {roomID}
+            </span>
+            <button
+                className="button"
+                onClick={() => {
+                  history.push(`/room/${roomID}`);
+                }}
+            >
+                Зайти в комнату
+            </button>
           </li>
         ))}
       </ul>
 
-      <button onClick={() => {
-        history.push(`/room/${v4()}`);
-      }}>Create New Room</button>
+      <button
+          className="button"
+          onClick={() => {
+            history.push(`/room/${v4()}`);
+          }}
+      >
+          Создать новую комнату
+      </button>
     </div>
   );
 }

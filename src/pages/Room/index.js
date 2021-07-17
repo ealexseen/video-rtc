@@ -36,16 +36,14 @@ export default function Room() {
   const videoLayout = layout(clients.length);
 
   return (
-    <div style={{
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      flexWrap: 'wrap',
-      height: '100vh',
-    }}>
+    <div className="room">
       {clients.map((clientID, index) => {
         return (
-          <div key={clientID} style={videoLayout[index]} id={clientID}>
+          <div
+              key={clientID}
+              id={clientID}
+              className="room__item"
+          >
             <video
               width='100%'
               height='100%'
