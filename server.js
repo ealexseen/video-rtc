@@ -112,7 +112,9 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(publicPath, 'index.html'));
 });
 
-httpServer.listen(3001, () => {
+console.log(process.env);
+
+httpServer.listen(process.env.PORT || 3001, () => {
   console.log(`server started ${3001}`);
 });
 httpsServer.listen(3002, () => {
